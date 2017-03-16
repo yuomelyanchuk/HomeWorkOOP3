@@ -12,7 +12,9 @@ public class Student extends Human {
 	}
 	public void setStudentCardNumber(int studentCardNumber) {
 		try{
-		if(studentCardNumber<1) throw new IllegalArgumentException("card number mest be greater then 0");
+		if(studentCardNumber<1) {
+			throw new IllegalArgumentException("card number mest be greater then 0");
+		}
 		this.studentCardNumber = studentCardNumber;
 		}catch(IllegalArgumentException e){
 			System.out.println(e.getMessage());

@@ -2,7 +2,7 @@ package com.gmail.yuomelyanchuk;
 
 import java.util.Arrays;
 
-import javax.print.attribute.standard.MediaSize.Other;
+
 
 public class Group {
 
@@ -14,10 +14,14 @@ public class Group {
 
 	public void addStudentToGroup(Student st) {
 		try {
-			if (st == null || st.getLastName() == null || st.getStudentCardNumber() == 0)
+			if (st == null || st.getLastName() == null || st.getStudentCardNumber() == 0){
 				throw new NullPointerException("first enter student lastname and student card number");
+			}
+				
 			if (getStudentIndexByCardNumber(st.getStudentCardNumber()) != -1)
+			{
 				throw new IllegalArgumentException("student with card number already exists");
+			}
 
 			students[getFirstEmptyPlace()] = st;
 
