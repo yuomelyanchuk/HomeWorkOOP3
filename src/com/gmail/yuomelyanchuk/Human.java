@@ -8,7 +8,7 @@ public class Human {
 	private String lastName;
 	private String firstName;
 	private Date birthDay;
-	SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd.mm.yyyy");
 	public Human() {
 		super();		
 	}
